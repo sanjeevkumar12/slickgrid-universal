@@ -476,6 +476,9 @@ export class SlickGrid<TData = any, C extends Column<TData> = Column<TData>, O e
    * @param {Object} [externalPubSub] - optional External PubSub Service to use by SlickEvent
    **/
   constructor(protected readonly container: HTMLElement | string, protected data: CustomDataView<TData> | TData[], protected columns: C[], options: Partial<O>, protected readonly externalPubSub?: BasePubSub) {
+    console.log('1111');
+    debugger;
+
     this._container = typeof this.container === 'string'
       ? document.querySelector(this.container) as HTMLDivElement
       : this.container;
